@@ -50,3 +50,34 @@ O(n): because we are iterating through the array once
 space complexity:
 O(n): because we are using a recursive stack
 */
+
+
+/*
+Now lets optimize the space complexity by using 1 pointer
+*/
+class p8 {
+    static void swap(int arr[],int i,int j)
+    {
+        int temp=arr[i];
+         arr[i]=arr[j];
+         arr[j] = temp;
+    }
+    public static int[] reverse(int arr[],int i)
+    {
+        if(i>=arr.length/2)
+        {
+            return arr;
+        }
+        swap(arr,i,arr.length-i-1);
+        reverse(arr,i+1);
+        return arr;
+    }
+    public static void main(String[] args) {
+        int arr[]={1,2,3,4,5};
+        int i=0;
+        int ans[] = reverse(arr,i);
+        for (int k = 0; k < ans.length; k++) {
+            System.out.println(ans[k]);
+        }
+    }
+}
