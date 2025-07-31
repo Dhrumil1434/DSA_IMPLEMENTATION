@@ -1,8 +1,6 @@
-
 /*
 Now lets optimize the space complexity by using 1 pointer
 */
-
 class p8 
 {
     public static void swap(int arr[],int i,int j)
