@@ -15,3 +15,19 @@ public class p5 {
       func(n, 0);
   }
 }
+/*
+output:
+3
+2
+1
+0
+walkthrough:
+func(3,0)
+func(2,1)
+func(1,2)
+func(0,3)
+3
+2
+1
+0
+ */
