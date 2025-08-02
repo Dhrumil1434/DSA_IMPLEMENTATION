@@ -1,19 +1,24 @@
 # Problem 4: Print 1 to N (Ascending Order) Using Recursion
 
 ## Problem Statement
+
 Print numbers from 1 to N in ascending order using recursion. This problem demonstrates post-order recursion where we print after making the recursive call, which results in ascending order output.
 
 ## Example
+
 **Input:** N = 10  
 **Output:** 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
 ## Solution Approach
+
 This problem uses post-order recursion:
+
 - **Recursive Call First**: Make recursive call before printing
 - **Print After**: Print the current number after returning from recursive call
 - **Base Condition**: Stop when number becomes less than 1
 
 ## Code Implementation
+
 ```java
 class p4 {
     public static void demo(int i, int N) {
@@ -21,14 +26,14 @@ class p4 {
         if (i < 1) {
             return;
         }
-        
+
         // Recursive call first (with decremented value)
         demo(i - 1, N);
-        
+
         // Print current number after recursive call
         System.out.println(i);
     }
-    
+
     public static void main(String[] args) {
         demo(10, 10);
     }
@@ -151,29 +156,29 @@ class p4 {
 
 ## Call Stack Visualization
 
-| Call Stack Level | Function Call | i | N | Action | Output |
-|------------------|---------------|---|----|--------|---------|
-| 1 | demo(10, 10) | 10 | 10 | Call demo(9, 10) | - |
-| 2 | demo(9, 10) | 9 | 10 | Call demo(8, 10) | - |
-| 3 | demo(8, 10) | 8 | 10 | Call demo(7, 10) | - |
-| 4 | demo(7, 10) | 7 | 10 | Call demo(6, 10) | - |
-| 5 | demo(6, 10) | 6 | 10 | Call demo(5, 10) | - |
-| 6 | demo(5, 10) | 5 | 10 | Call demo(4, 10) | - |
-| 7 | demo(4, 10) | 4 | 10 | Call demo(3, 10) | - |
-| 8 | demo(3, 10) | 3 | 10 | Call demo(2, 10) | - |
-| 9 | demo(2, 10) | 2 | 10 | Call demo(1, 10) | - |
-| 10 | demo(1, 10) | 1 | 10 | Call demo(0, 10) | - |
-| 11 | demo(0, 10) | 0 | 10 | Base case, return | - |
-| 10 | demo(1, 10) | 1 | 10 | Print 1, return | 1 |
-| 9 | demo(2, 10) | 2 | 10 | Print 2, return | 2 |
-| 8 | demo(3, 10) | 3 | 10 | Print 3, return | 3 |
-| 7 | demo(4, 10) | 4 | 10 | Print 4, return | 4 |
-| 6 | demo(5, 10) | 5 | 10 | Print 5, return | 5 |
-| 5 | demo(6, 10) | 6 | 10 | Print 6, return | 6 |
-| 4 | demo(7, 10) | 7 | 10 | Print 7, return | 7 |
-| 8 | demo(8, 10) | 8 | 10 | Print 8, return | 8 |
-| 3 | demo(9, 10) | 9 | 10 | Print 9, return | 9 |
-| 2 | demo(10, 10) | 10 | 10 | Print 10, return | 10 |
+| Call Stack Level | Function Call | i   | N   | Action            | Output |
+| ---------------- | ------------- | --- | --- | ----------------- | ------ |
+| 1                | demo(10, 10)  | 10  | 10  | Call demo(9, 10)  | -      |
+| 2                | demo(9, 10)   | 9   | 10  | Call demo(8, 10)  | -      |
+| 3                | demo(8, 10)   | 8   | 10  | Call demo(7, 10)  | -      |
+| 4                | demo(7, 10)   | 7   | 10  | Call demo(6, 10)  | -      |
+| 5                | demo(6, 10)   | 6   | 10  | Call demo(5, 10)  | -      |
+| 6                | demo(5, 10)   | 5   | 10  | Call demo(4, 10)  | -      |
+| 7                | demo(4, 10)   | 4   | 10  | Call demo(3, 10)  | -      |
+| 8                | demo(3, 10)   | 3   | 10  | Call demo(2, 10)  | -      |
+| 9                | demo(2, 10)   | 2   | 10  | Call demo(1, 10)  | -      |
+| 10               | demo(1, 10)   | 1   | 10  | Call demo(0, 10)  | -      |
+| 11               | demo(0, 10)   | 0   | 10  | Base case, return | -      |
+| 10               | demo(1, 10)   | 1   | 10  | Print 1, return   | 1      |
+| 9                | demo(2, 10)   | 2   | 10  | Print 2, return   | 2      |
+| 8                | demo(3, 10)   | 3   | 10  | Print 3, return   | 3      |
+| 7                | demo(4, 10)   | 4   | 10  | Print 4, return   | 4      |
+| 6                | demo(5, 10)   | 5   | 10  | Print 5, return   | 5      |
+| 5                | demo(6, 10)   | 6   | 10  | Print 6, return   | 6      |
+| 4                | demo(7, 10)   | 7   | 10  | Print 7, return   | 7      |
+| 8                | demo(8, 10)   | 8   | 10  | Print 8, return   | 8      |
+| 3                | demo(9, 10)   | 9   | 10  | Print 9, return   | 9      |
+| 2                | demo(10, 10)  | 10  | 10  | Print 10, return  | 10     |
 
 ## Step-by-Step Execution Trace
 
@@ -211,26 +216,31 @@ Final Output: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 ## Key Concepts Explained
 
 ### 1. Post-order Recursion
+
 - **Definition**: Recursive call is made before processing
 - **Pattern**: Recursive Call → Process (operations after return)
 - **Result**: Numbers printed in ascending order
 
 ### 2. Stack-based Processing
+
 - **Mechanism**: Uses call stack to reverse the order
 - **Timing**: Processing happens on the way back up
 - **Memory**: All calls are stored in stack before any printing
 
 ### 3. Two-Phase Execution
+
 - **Phase 1**: All recursive calls are made (going down)
 - **Phase 2**: All printing happens during returns (coming back up)
 
 ## Time and Space Complexity
 
 ### Time Complexity: O(n)
+
 - **Explanation**: Function is called exactly n+1 times (n to 0)
 - **Analysis**: Each call performs constant time operations (check, decrement, print)
 
 ### Space Complexity: O(n)
+
 - **Explanation**: Maximum depth of recursion stack = n+1
 - **Stack Frames**: All calls are stored before any returns
 - **Memory**: O(n) space used in call stack
@@ -267,6 +277,7 @@ Call Stack (Top to Bottom):
 ## Alternative Implementations
 
 ### Approach 1: Pre-order Recursion (Descending)
+
 ```java
 public static void demo(int i, int N) {
     if (i < 1) return;
@@ -276,6 +287,7 @@ public static void demo(int i, int N) {
 ```
 
 ### Approach 2: Using While Loop (Iterative)
+
 ```java
 public static void demo(int N) {
     int i = 1;
@@ -287,6 +299,7 @@ public static void demo(int N) {
 ```
 
 ### Approach 3: For Loop (Iterative)
+
 ```java
 public static void demo(int N) {
     for (int i = 1; i <= N; i++) {
@@ -297,13 +310,13 @@ public static void demo(int N) {
 
 ## Comparison: Post-order vs Pre-order
 
-| Aspect | Post-order (Ascending) | Pre-order (Descending) |
-|--------|------------------------|------------------------|
-| **Print Order** | After recursive call | Before recursive call |
-| **Output Order** | 1, 2, 3, ..., N | N, N-1, N-2, ..., 1 |
-| **Stack Usage** | All calls stored | Minimal stack usage |
-| **Memory Efficiency** | Less efficient | More efficient |
-| **Readability** | Counter-intuitive | Intuitive |
+| Aspect                | Post-order (Ascending) | Pre-order (Descending) |
+| --------------------- | ---------------------- | ---------------------- |
+| **Print Order**       | After recursive call   | Before recursive call  |
+| **Output Order**      | 1, 2, 3, ..., N        | N, N-1, N-2, ..., 1    |
+| **Stack Usage**       | All calls stored       | Minimal stack usage    |
+| **Memory Efficiency** | Less efficient         | More efficient         |
+| **Readability**       | Counter-intuitive      | Intuitive              |
 
 ## Common Mistakes to Avoid
 
@@ -333,4 +346,4 @@ public static void demo(int N) {
 - **Stack-based processing** uses call stack to reverse order
 - **Two-phase execution** separates recursive calls from processing
 - **Memory usage** is higher due to storing all calls
-- **Understanding execution flow** is crucial for post-order recursion 
+- **Understanding execution flow** is crucial for post-order recursion

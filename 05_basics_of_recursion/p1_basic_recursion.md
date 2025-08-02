@@ -1,39 +1,44 @@
 # Problem 1: Basic Recursion with Base Condition
 
 ## Problem Statement
+
 Demonstrate the fundamental concept of recursion using a simple counter that prints numbers from 1 to 5 using a global variable and base condition.
 
 ## Example
+
 **Input:** None (uses global counter)  
 **Output:** 1, 2, 3, 4, 5
 
 ## Solution Approach
+
 This problem introduces the core concepts of recursion:
+
 - **Base Condition**: The stopping criteria for recursion
 - **Recursive Call**: Function calling itself
 - **Global Variable**: Shared state across recursive calls
 
 ## Code Implementation
+
 ```java
 class p1_recursion_with_base_condition {
     static int count = 1;  // Global variable to track count
-    
+
     public static void demo() {
         // Base condition: stop when count reaches 6
         if (count == 6) {
             return;
         }
-        
+
         // Print current count
         System.out.println(count);
-        
+
         // Increment count
         count++;
-        
+
         // Recursive call
         demo();
     }
-    
+
     public static void main(String[] args) {
         demo();
     }
@@ -93,14 +98,14 @@ class p1_recursion_with_base_condition {
 
 ## Call Stack Visualization
 
-| Call Stack Level | Function Call | count Value | Action | Output |
-|------------------|---------------|-------------|--------|---------|
-| 1 | demo() | 1 | Print count, increment, call demo() | 1 |
-| 2 | demo() | 2 | Print count, increment, call demo() | 2 |
-| 3 | demo() | 3 | Print count, increment, call demo() | 3 |
-| 4 | demo() | 4 | Print count, increment, call demo() | 4 |
-| 5 | demo() | 5 | Print count, increment, call demo() | 5 |
-| 6 | demo() | 6 | Base case reached, return | - |
+| Call Stack Level | Function Call | count Value | Action                              | Output |
+| ---------------- | ------------- | ----------- | ----------------------------------- | ------ |
+| 1                | demo()        | 1           | Print count, increment, call demo() | 1      |
+| 2                | demo()        | 2           | Print count, increment, call demo() | 2      |
+| 3                | demo()        | 3           | Print count, increment, call demo() | 3      |
+| 4                | demo()        | 4           | Print count, increment, call demo() | 4      |
+| 5                | demo()        | 5           | Print count, increment, call demo() | 5      |
+| 6                | demo()        | 6           | Base case reached, return           | -      |
 
 ## Step-by-Step Execution Trace
 
@@ -147,16 +152,19 @@ Final Output: 1, 2, 3, 4, 5
 ## Key Concepts Explained
 
 ### 1. Base Condition
+
 - **Purpose**: Prevents infinite recursion
 - **Implementation**: `if (count == 6) return;`
 - **Why Important**: Without base condition, recursion would continue forever
 
 ### 2. Global Variable
+
 - **Purpose**: Maintains state across recursive calls
 - **Advantage**: Simple to implement
 - **Disadvantage**: Not thread-safe, can cause side effects
 
 ### 3. Recursive Call
+
 - **Pattern**: Function calls itself with modified parameters
 - **Order**: After processing current state
 - **Stack**: Each call creates a new stack frame
@@ -164,10 +172,12 @@ Final Output: 1, 2, 3, 4, 5
 ## Time and Space Complexity
 
 ### Time Complexity: O(n)
+
 - **Explanation**: Function is called exactly n times (where n = 5)
 - **Analysis**: Each call performs constant time operations (print, increment, check)
 
 ### Space Complexity: O(n)
+
 - **Explanation**: Maximum depth of recursion stack = n
 - **Stack Frames**: Each recursive call creates a new stack frame
 - **Memory**: O(n) space used in call stack
@@ -201,6 +211,7 @@ Call Stack (Top to Bottom):
 ## Alternative Approaches
 
 ### Approach 1: Parameter-based (Recommended)
+
 ```java
 public static void demo(int count) {
     if (count > 5) return;
@@ -210,6 +221,7 @@ public static void demo(int count) {
 ```
 
 ### Approach 2: Return-based
+
 ```java
 public static int demo(int count) {
     if (count > 5) return count;
@@ -238,4 +250,4 @@ public static int demo(int count) {
 - **Global variables** can simplify recursion but have limitations
 - **Call stack** grows with each recursive call
 - **Parameter-based recursion** is generally preferred over global variables
-- **Understanding the flow** helps in debugging recursive functions 
+- **Understanding the flow** helps in debugging recursive functions

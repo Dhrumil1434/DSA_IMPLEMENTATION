@@ -1,24 +1,30 @@
 # Problem 6: Factorial Using Recursion
 
 ## Problem Statement
+
 Calculate the factorial of a number using recursion. Factorial of n (denoted as n!) is the product of all positive integers less than or equal to n.
 
 ## Mathematical Definition
+
 - n! = n × (n-1) × (n-2) × ... × 2 × 1
 - 0! = 1 (by definition)
 - 1! = 1
 
 ## Example
+
 **Input:** n = 5  
 **Output:** 120 (5! = 5 × 4 × 3 × 2 × 1 = 120)
 
 ## Solution Approach
+
 This problem uses mathematical recursion:
+
 - **Base Cases**: n = 0 or n = 1, return 1
 - **Recursive Case**: n! = n × (n-1)!
 - **Decomposition**: Break down into smaller subproblems
 
 ## Code Implementation
+
 ```java
 public class p6 {
     public static int factorial(int n) {
@@ -26,11 +32,11 @@ public class p6 {
         if (n == 1 || n == 0) {
             return 1;
         }
-        
+
         // Recursive case: n! = n × (n-1)!
         return n * factorial(n - 1);
     }
-    
+
     public static void main(String[] args) {
         int ans = factorial(5);
         System.out.println(ans);
@@ -94,13 +100,13 @@ public class p6 {
 
 ## Call Stack Visualization
 
-| Call Stack Level | Function Call | n | Action | Return Value |
-|------------------|---------------|---|--------|--------------|
-| 1 | factorial(5) | 5 | Return 5 × factorial(4) | 5 × 24 = 120 |
-| 2 | factorial(4) | 4 | Return 4 × factorial(3) | 4 × 6 = 24 |
-| 3 | factorial(3) | 3 | Return 3 × factorial(2) | 3 × 2 = 6 |
-| 4 | factorial(2) | 2 | Return 2 × factorial(1) | 2 × 1 = 2 |
-| 5 | factorial(1) | 1 | Base case, return 1 | 1 |
+| Call Stack Level | Function Call | n   | Action                  | Return Value |
+| ---------------- | ------------- | --- | ----------------------- | ------------ |
+| 1                | factorial(5)  | 5   | Return 5 × factorial(4) | 5 × 24 = 120 |
+| 2                | factorial(4)  | 4   | Return 4 × factorial(3) | 4 × 6 = 24   |
+| 3                | factorial(3)  | 3   | Return 3 × factorial(2) | 3 × 2 = 6    |
+| 4                | factorial(2)  | 2   | Return 2 × factorial(1) | 2 × 1 = 2    |
+| 5                | factorial(1)  | 1   | Base case, return 1     | 1            |
 
 ## Step-by-Step Execution Trace
 
@@ -143,12 +149,15 @@ Final Result: 120
 ## Mathematical Analysis
 
 ### Understanding Factorial
+
 - **Definition**: n! = n × (n-1) × (n-2) × ... × 2 × 1
 - **Base Cases**: 0! = 1, 1! = 1
 - **Recursive Formula**: n! = n × (n-1)!
 
 ### Mathematical Proof
+
 For n = 5:
+
 - 5! = 5 × 4!
 - 4! = 4 × 3!
 - 3! = 3 × 2!
@@ -156,6 +165,7 @@ For n = 5:
 - 1! = 1
 
 Substituting back:
+
 - 2! = 2 × 1 = 2
 - 3! = 3 × 2 = 6
 - 4! = 4 × 6 = 24
@@ -164,10 +174,12 @@ Substituting back:
 ## Time and Space Complexity
 
 ### Time Complexity: O(n)
+
 - **Explanation**: Function is called exactly n times (n to 1)
 - **Analysis**: Each call performs constant time operations (check, multiplication, recursive call)
 
 ### Space Complexity: O(n)
+
 - **Explanation**: Maximum depth of recursion stack = n
 - **Stack Frames**: Each recursive call creates a new stack frame
 - **Memory**: O(n) space used in call stack
@@ -192,11 +204,12 @@ Call Stack (Top to Bottom):
 ## Alternative Implementations
 
 ### Approach 1: Iterative (Recommended for Large Numbers)
+
 ```java
 public static int factorial(int n) {
     if (n < 0) return -1; // Error case
     if (n == 0 || n == 1) return 1;
-    
+
     int result = 1;
     for (int i = 2; i <= n; i++) {
         result *= i;
@@ -206,6 +219,7 @@ public static int factorial(int n) {
 ```
 
 ### Approach 2: Tail Recursion (Optimized)
+
 ```java
 public static int factorial(int n, int accumulator) {
     if (n <= 1) return accumulator;
@@ -216,6 +230,7 @@ public static int factorial(int n, int accumulator) {
 ```
 
 ### Approach 3: Long for Larger Numbers
+
 ```java
 public static long factorial(int n) {
     if (n <= 1) return 1;
@@ -225,13 +240,13 @@ public static long factorial(int n) {
 
 ## Comparison: Recursive vs Iterative
 
-| Aspect | Recursive | Iterative |
-|--------|-----------|-----------|
-| **Space Complexity** | O(n) | O(1) |
-| **Time Complexity** | O(n) | O(n) |
-| **Readability** | High | High |
-| **Stack Overflow Risk** | Yes (for large n) | No |
-| **Memory Efficiency** | Low | High |
+| Aspect                  | Recursive         | Iterative |
+| ----------------------- | ----------------- | --------- |
+| **Space Complexity**    | O(n)              | O(1)      |
+| **Time Complexity**     | O(n)              | O(n)      |
+| **Readability**         | High              | High      |
+| **Stack Overflow Risk** | Yes (for large n) | No        |
+| **Memory Efficiency**   | Low               | High      |
 
 ## Common Mistakes to Avoid
 
@@ -251,7 +266,7 @@ public static long factorial(int n) {
 
 1. Calculate factorial using tail recursion
 2. Calculate double factorial (n!!)
-3. Calculate falling factorial (n)_k
+3. Calculate falling factorial (n)\_k
 4. Calculate factorial with modulo arithmetic
 5. Calculate factorial using memoization
 
@@ -262,14 +277,14 @@ import java.util.*;
 
 public class FactorialMemoization {
     static Map<Integer, Long> memo = new HashMap<>();
-    
+
     public static long factorial(int n) {
         if (n <= 1) return 1;
-        
+
         if (memo.containsKey(n)) {
             return memo.get(n);
         }
-        
+
         long result = n * factorial(n - 1);
         memo.put(n, result);
         return result;
@@ -283,4 +298,4 @@ public class FactorialMemoization {
 - **Base cases** are crucial for stopping recursion
 - **Stack overflow** can occur for large numbers
 - **Iterative approach** is more memory efficient
-- **Understanding mathematical relationships** is key to recursive solutions 
+- **Understanding mathematical relationships** is key to recursive solutions

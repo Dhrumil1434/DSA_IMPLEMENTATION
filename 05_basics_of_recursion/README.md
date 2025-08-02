@@ -35,21 +35,21 @@ Welcome to **DSA Notes by Dmeel** - your comprehensive guide to mastering recurs
 
 ### 📋 **05_Basics_of_Recursion**
 
-| # | Problem Statement | Difficulty Level | Key Topics |
-|---|-------------------|------------------|------------|
-| 1 | [Demonstrate the fundamental concept of recursion using a simple counter that prints numbers from 1 to 5 using a global variable and base condition](p1_basic_recursion.md) | ⭐ Beginner | Base conditions, call stack, global variables |
-| 2 | [Print a given string "Hello" exactly N times using recursion with parameter-based approach](p2_print_n_times.md) | ⭐ Beginner | Parameter-based recursion, tail recursion |
-| 3 | [Print numbers from N down to 1 using recursion with pre-order processing](p3_print_descending.md) | ⭐⭐ Easy | Tail recursion, pre-order recursion, descending order |
-| 4 | [Print numbers from 1 to N in ascending order using post-order recursion](p4_print_ascending.md) | ⭐⭐ Easy | Post-order recursion, stack-based processing, ascending order |
-| 5 | [Count from 1 to N using recursion with accumulator pattern](p5_count_recursion.md) | ⭐⭐ Easy | Accumulator pattern, parameter passing, state management |
-| 6 | [Calculate the factorial of a number using mathematical recursion](p6_factorial.md) | ⭐⭐ Easy | Mathematical recursion, base case handling, recursion tree |
-| 7 | [Reverse an array using recursion with two-pointer technique](p7_reverse_array_two_pointers.md) | ⭐⭐⭐ Medium | Two-pointer technique, in-place algorithms, array manipulation |
-| 8 | [Reverse an array using recursion with single-pointer optimization](p8_reverse_array_single_pointer.md) | ⭐⭐⭐ Medium | Single pointer optimization, space efficiency, mirror index calculation |
-| 9 | [Check if a given string is a palindrome using iterative two-pointer approach](p9_palindrome_iterative.md) | ⭐⭐ Easy | Two-pointer technique, string validation, iterative approach |
-| 10 | [Check if a given string is a palindrome using recursion with two pointers](p10_palindrome_recursive.md) | ⭐⭐ Easy | Two-pointer recursion, string validation, recursive approach |
-| 11 | [Check if a given string is a palindrome using recursion with single pointer optimization](p11_palindrome_optimized.md) | ⭐⭐ Easy | Single pointer recursion, mirror index calculation, optimization |
-| 12 | [Calculate the Nth Fibonacci number using recursion with memoization](p12_fibonacci_memoization.md) | ⭐⭐⭐ Medium | Dynamic programming, memoization, overlapping subproblems |
-| 13 | [Print all subsequences of a given string using choice-based recursion](p13_subsequence_notes.md) | ⭐⭐⭐⭐ Hard | Choice-based recursion, complete enumeration, binary decision tree |
+| #   | Problem Statement                                                                                                                                                           | Difficulty Level | Key Topics                                                              |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------- |
+| 1   | [Demonstrate the fundamental concept of recursion using a simple counter that prints numbers from 1 to 5 using a global variable and base condition](p1_basic_recursion.md) | ⭐ Beginner      | Base conditions, call stack, global variables                           |
+| 2   | [Print a given string "Hello" exactly N times using recursion with parameter-based approach](p2_print_n_times.md)                                                           | ⭐ Beginner      | Parameter-based recursion, tail recursion                               |
+| 3   | [Print numbers from N down to 1 using recursion with pre-order processing](p3_print_descending.md)                                                                          | ⭐⭐ Easy        | Tail recursion, pre-order recursion, descending order                   |
+| 4   | [Print numbers from 1 to N in ascending order using post-order recursion](p4_print_ascending.md)                                                                            | ⭐⭐ Easy        | Post-order recursion, stack-based processing, ascending order           |
+| 5   | [Count from 1 to N using recursion with accumulator pattern](p5_count_recursion.md)                                                                                         | ⭐⭐ Easy        | Accumulator pattern, parameter passing, state management                |
+| 6   | [Calculate the factorial of a number using mathematical recursion](p6_factorial.md)                                                                                         | ⭐⭐ Easy        | Mathematical recursion, base case handling, recursion tree              |
+| 7   | [Reverse an array using recursion with two-pointer technique](p7_reverse_array_two_pointers.md)                                                                             | ⭐⭐⭐ Medium    | Two-pointer technique, in-place algorithms, array manipulation          |
+| 8   | [Reverse an array using recursion with single-pointer optimization](p8_reverse_array_single_pointer.md)                                                                     | ⭐⭐⭐ Medium    | Single pointer optimization, space efficiency, mirror index calculation |
+| 9   | [Check if a given string is a palindrome using iterative two-pointer approach](p9_palindrome_iterative.md)                                                                  | ⭐⭐ Easy        | Two-pointer technique, string validation, iterative approach            |
+| 10  | [Check if a given string is a palindrome using recursion with two pointers](p10_palindrome_recursive.md)                                                                    | ⭐⭐ Easy        | Two-pointer recursion, string validation, recursive approach            |
+| 11  | [Check if a given string is a palindrome using recursion with single pointer optimization](p11_palindrome_optimized.md)                                                     | ⭐⭐ Easy        | Single pointer recursion, mirror index calculation, optimization        |
+| 12  | [Calculate the Nth Fibonacci number using recursion with memoization](p12_fibonacci_memoization.md)                                                                         | ⭐⭐⭐ Medium    | Dynamic programming, memoization, overlapping subproblems               |
+| 13  | [Print all subsequences of a given string using choice-based recursion](p13_subsequence_notes.md)                                                                           | ⭐⭐⭐⭐ Hard    | Choice-based recursion, complete enumeration, binary decision tree      |
 
 ---
 
@@ -64,47 +64,52 @@ graph TD
     C --> D[Level 3: Mathematical]
     D --> E[Level 4: Array/String]
     E --> F[Level 5: Advanced]
-    
+
     B --> B1[Problem 1: Base Conditions]
     B --> B2[Problem 2: Parameters]
-    
+
     C --> C1[Problem 3: Descending]
     C --> C2[Problem 4: Ascending]
     C --> C3[Problem 5: Counting]
-    
+
     D --> D1[Problem 6: Factorial]
     D --> D2[Problem 12: Fibonacci]
-    
+
     E --> E1[Problem 7: Two Pointers]
     E --> E2[Problem 8: Single Pointer]
     E --> E3[Problem 9-11: Palindrome]
-    
+
     F --> F1[Problem 13: Subsequences]
 ```
 
 ### 🎯 **Learning Objectives by Level**
 
 #### **Level 1: Foundation** 🏗️
+
 - Understand recursion basics
 - Master base conditions
 - Learn call stack visualization
 
 #### **Level 2: Patterns** 📊
+
 - Master different recursion patterns
 - Understand parameter passing
 - Learn accumulator techniques
 
 #### **Level 3: Mathematics** 🧮
+
 - Apply recursion to mathematical problems
 - Learn dynamic programming basics
 - Understand optimization techniques
 
 #### **Level 4: Data Structures** 🔄
+
 - Manipulate arrays and strings recursively
 - Master pointer techniques
 - Learn space optimization
 
 #### **Level 5: Advanced** 🎯
+
 - Solve complex recursive problems
 - Master choice-based recursion
 - Understand complete enumeration
@@ -115,22 +120,22 @@ graph TD
 
 ### 🔑 **Key Recursion Patterns**
 
-| Pattern | Description | Example Problems |
-|---------|-------------|------------------|
-| **Tail Recursion** | Recursive call is last operation | P3, P5 |
-| **Post-order** | Process after recursive call | P4 |
-| **Pre-order** | Process before recursive call | P3 |
-| **Choice-based** | Multiple recursive paths | P13 |
-| **Accumulator** | Pass result as parameter | P5 |
+| Pattern            | Description                      | Example Problems |
+| ------------------ | -------------------------------- | ---------------- |
+| **Tail Recursion** | Recursive call is last operation | P3, P5           |
+| **Post-order**     | Process after recursive call     | P4               |
+| **Pre-order**      | Process before recursive call    | P3               |
+| **Choice-based**   | Multiple recursive paths         | P13              |
+| **Accumulator**    | Pass result as parameter         | P5               |
 
 ### 📊 **Complexity Cheat Sheet**
 
-| Problem Type | Time Complexity | Space Complexity |
-|--------------|-----------------|------------------|
-| Simple Recursion | O(n) | O(n) |
-| Tail Recursion | O(n) | O(n) |
-| Memoization | O(n) | O(n) |
-| Choice-based | O(2^n) | O(n) |
+| Problem Type     | Time Complexity | Space Complexity |
+| ---------------- | --------------- | ---------------- |
+| Simple Recursion | O(n)            | O(n)             |
+| Tail Recursion   | O(n)            | O(n)             |
+| Memoization      | O(n)            | O(n)             |
+| Choice-based     | O(2^n)          | O(n)             |
 
 ### 🎯 **Common Base Cases**
 
@@ -153,17 +158,20 @@ if (i >= s.length()/2) return true;
 ## 🔧 Prerequisites
 
 ### 📚 **Required Knowledge**
+
 - ✅ Basic Java programming
 - ✅ Understanding of arrays and strings
 - ✅ Familiarity with loops and conditionals
 - ✅ Basic mathematical concepts
 
 ### 🛠️ **Tools & Environment**
+
 - ✅ Java Development Kit (JDK)
 - ✅ Any Java IDE (IntelliJ, Eclipse, VS Code)
 - ✅ Git for version control (optional)
 
 ### 📖 **Recommended Reading**
+
 - "Introduction to Algorithms" by CLRS
 - "Grokking Algorithms" by Aditya Bhargava
 - Online platforms: LeetCode, HackerRank
@@ -180,19 +188,23 @@ Copy this template and mark your progress:
 ## My Progress Tracker
 
 ### Level 1: Basic Concepts
+
 - [ ] Problem 1: Basic Recursion with Base Condition
 - [ ] Problem 2: Print String N Times
 
 ### Level 2: Number Series & Counting
+
 - [ ] Problem 3: Print N to 1 (Descending)
 - [ ] Problem 4: Print 1 to N (Ascending)
 - [ ] Problem 5: Count 1 to N
 
 ### Level 3: Mathematical Problems
+
 - [ ] Problem 6: Factorial Using Recursion
 - [ ] Problem 12: Fibonacci with Memoization
 
 ### Level 4: Array & String Manipulation
+
 - [ ] Problem 7: Reverse Array (Two Pointers)
 - [ ] Problem 8: Reverse Array (Single Pointer)
 - [ ] Problem 9: Check Palindrome (Iterative)
@@ -200,6 +212,7 @@ Copy this template and mark your progress:
 - [ ] Problem 11: Check Palindrome (Optimized)
 
 ### Level 5: Advanced Recursion
+
 - [ ] Problem 13: Print All Subsequences
 ```
 
@@ -297,7 +310,7 @@ Found an error or want to improve the notes? Here's how you can contribute:
 
 ### 🌟 **Happy Learning!** 🌟
 
-*"The only way to learn a new programming language is by writing programs in it."* - Dennis Ritchie
+_"The only way to learn a new programming language is by writing programs in it."_ - Dennis Ritchie
 
 </div>
 

@@ -1,11 +1,14 @@
 # Problem 2: Print String N Times Using Recursion
 
 ## Problem Statement
+
 Print a given string "Hello" exactly N times using recursion. This problem demonstrates parameter-based recursion where we pass the current iteration count and target count as parameters.
 
 ## Example
+
 **Input:** N = 5  
-**Output:** 
+**Output:**
+
 ```
 Hello
 Hello
@@ -15,12 +18,15 @@ Hello
 ```
 
 ## Solution Approach
+
 This problem uses parameter-based recursion with two parameters:
+
 - **Current Index (i)**: Tracks the current iteration
 - **Target Count (j)**: The total number of times to print
 - **Base Condition**: Stop when current index exceeds target count
 
 ## Code Implementation
+
 ```java
 public class p2 {
     public static void demo(int i, int j) {
@@ -28,10 +34,10 @@ public class p2 {
         if (i > j) {
             return;
         }
-        
+
         // Print the string
         System.out.println("Hello");
-        
+
         // Recursive call with incremented index
         demo(i + 1, j);
     }
@@ -96,14 +102,14 @@ public class p2 {
 
 ## Call Stack Visualization
 
-| Call Stack Level | Function Call | i | j | Action | Output |
-|------------------|---------------|---|---|--------|---------|
-| 1 | demo(1, 5) | 1 | 5 | Print "Hello", call demo(2, 5) | Hello |
-| 2 | demo(2, 5) | 2 | 5 | Print "Hello", call demo(3, 5) | Hello |
-| 3 | demo(3, 5) | 3 | 5 | Print "Hello", call demo(4, 5) | Hello |
-| 4 | demo(4, 5) | 4 | 5 | Print "Hello", call demo(5, 5) | Hello |
-| 5 | demo(5, 5) | 5 | 5 | Print "Hello", call demo(6, 5) | Hello |
-| 6 | demo(6, 5) | 6 | 5 | Base case reached, return | - |
+| Call Stack Level | Function Call | i   | j   | Action                         | Output |
+| ---------------- | ------------- | --- | --- | ------------------------------ | ------ |
+| 1                | demo(1, 5)    | 1   | 5   | Print "Hello", call demo(2, 5) | Hello  |
+| 2                | demo(2, 5)    | 2   | 5   | Print "Hello", call demo(3, 5) | Hello  |
+| 3                | demo(3, 5)    | 3   | 5   | Print "Hello", call demo(4, 5) | Hello  |
+| 4                | demo(4, 5)    | 4   | 5   | Print "Hello", call demo(5, 5) | Hello  |
+| 5                | demo(5, 5)    | 5   | 5   | Print "Hello", call demo(6, 5) | Hello  |
+| 6                | demo(6, 5)    | 6   | 5   | Base case reached, return      | -      |
 
 ## Step-by-Step Execution Trace
 
@@ -150,16 +156,19 @@ Hello
 ## Key Concepts Explained
 
 ### 1. Parameter-based Recursion
+
 - **Advantage**: More flexible and reusable than global variables
 - **Parameters**: Current state (i) and target state (j)
 - **Thread Safety**: Each call has its own parameter values
 
 ### 2. Base Condition Logic
+
 - **Condition**: `if (i > j) return;`
 - **Why `>` instead of `>=`**: Ensures we print exactly j times
 - **Alternative**: Could use `if (i == j + 1) return;`
 
 ### 3. Tail Recursion
+
 - **Definition**: Recursive call is the last operation
 - **Optimization**: Can be optimized by compiler to avoid stack overflow
 - **Pattern**: Process → Recursive Call (no operations after)
@@ -167,10 +176,12 @@ Hello
 ## Time and Space Complexity
 
 ### Time Complexity: O(n)
+
 - **Explanation**: Function is called exactly n+1 times (1 to n+1)
 - **Analysis**: Each call performs constant time operations (print, check, increment)
 
 ### Space Complexity: O(n)
+
 - **Explanation**: Maximum depth of recursion stack = n+1
 - **Stack Frames**: Each recursive call creates a new stack frame
 - **Memory**: O(n) space used in call stack
@@ -197,6 +208,7 @@ Call Stack (Top to Bottom):
 ## Alternative Implementations
 
 ### Approach 1: Decrementing Counter
+
 ```java
 public static void demo(int n) {
     if (n <= 0) return;
@@ -206,6 +218,7 @@ public static void demo(int n) {
 ```
 
 ### Approach 2: Using String Parameter
+
 ```java
 public static void demo(String str, int count) {
     if (count <= 0) return;
@@ -215,6 +228,7 @@ public static void demo(String str, int count) {
 ```
 
 ### Approach 3: Return-based with Counter
+
 ```java
 public static int demo(int current, int target) {
     if (current > target) return current;
@@ -226,6 +240,7 @@ public static int demo(int current, int target) {
 ## Comparison with Iterative Approach
 
 ### Recursive Approach
+
 ```java
 public static void demo(int i, int j) {
     if (i > j) return;
@@ -235,6 +250,7 @@ public static void demo(int i, int j) {
 ```
 
 ### Iterative Approach
+
 ```java
 public static void demo(int n) {
     for (int i = 1; i <= n; i++) {
@@ -243,13 +259,13 @@ public static void demo(int n) {
 }
 ```
 
-| Aspect | Recursive | Iterative |
-|--------|-----------|-----------|
-| **Space Complexity** | O(n) | O(1) |
-| **Time Complexity** | O(n) | O(n) |
-| **Readability** | High | High |
-| **Stack Usage** | Yes | No |
-| **Flexibility** | High | Medium |
+| Aspect               | Recursive | Iterative |
+| -------------------- | --------- | --------- |
+| **Space Complexity** | O(n)      | O(1)      |
+| **Time Complexity**  | O(n)      | O(n)      |
+| **Readability**      | High      | High      |
+| **Stack Usage**      | Yes       | No        |
+| **Flexibility**      | High      | Medium    |
 
 ## Common Mistakes to Avoid
 
@@ -279,4 +295,4 @@ public static void demo(int n) {
 - **Base condition** should be carefully designed to avoid off-by-one errors
 - **Tail recursion** can be optimized by compilers
 - **Call stack** grows linearly with the number of recursive calls
-- **Understanding parameter flow** is crucial for debugging recursive functions 
+- **Understanding parameter flow** is crucial for debugging recursive functions

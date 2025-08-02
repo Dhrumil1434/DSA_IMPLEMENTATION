@@ -1,20 +1,25 @@
 # Problem 9: Check Palindrome (Iterative Approach)
 
 ## Problem Statement
+
 Check if a given string is a palindrome using an iterative approach. A palindrome is a string that reads the same backward as forward.
 
 ## Example
+
 **Input:** "12321"  
 **Output:** true
 
 ## Solution Approach
+
 This problem uses a two-pointer iterative approach:
+
 - **Two Pointers**: Start (i) at the beginning, end (j) at the end
 - **Compare**: Check if characters at i and j are equal
 - **Move Pointers**: Increment i, decrement j
 - **Base Condition**: If any mismatch, return false; if pointers cross, return true
 
 ## Code Implementation
+
 ```java
 public class p9 {
     public static boolean checkPalindrome(char[] c) {
@@ -68,25 +73,30 @@ Return true
 ```
 
 ## Time and Space Complexity
+
 - **Time Complexity:** O(n) (n = length of string)
 - **Space Complexity:** O(1) (no extra space except variables)
 
 ## Key Concepts
+
 - Two-pointer technique
 - Iterative string processing
 - Early exit on mismatch
 
 ## Applications
+
 - String validation
 - Palindrome checking in text processing
 - Data cleaning (e.g., DNA, numbers)
 
 ## Practice Problems
+
 1. Check if a number is a palindrome (convert to string/array)
 2. Check palindrome for case-insensitive strings
 3. Check palindrome for sentences (ignore spaces/punctuation)
 
 ## Key Takeaways
+
 - Iterative two-pointer approach is efficient for palindrome checking
 - Early exit improves performance for non-palindromes
 - No recursion or extra space needed

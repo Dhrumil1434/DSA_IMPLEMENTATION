@@ -1,14 +1,18 @@
 # Problem 10: Check Palindrome (Recursive, Two Pointers)
 
 ## Problem Statement
+
 Check if a given string is a palindrome using recursion with two pointers (start and end indices).
 
 ## Example
+
 **Input:** "naman"  
 **Output:** true
 
 ## Solution Approach
+
 This problem uses recursion with two pointers:
+
 - **Two Pointers**: Start (i) at the beginning, end (j) at the end
 - **Base Cases**:
   - If string is empty, return false
@@ -17,6 +21,7 @@ This problem uses recursion with two pointers:
 - **Recursive Call**: Move i forward, j backward
 
 ## Code Implementation
+
 ```java
 public class p10 {
     public static boolean checkPalindrome(char c[], int i, int j) {
@@ -67,24 +72,29 @@ Backtrack: all calls return true
 ```
 
 ## Time and Space Complexity
+
 - **Time Complexity:** O(n)
 - **Space Complexity:** O(n) (recursion stack)
 
 ## Key Concepts
+
 - Two-pointer recursion
 - Base case for empty string and pointer crossing
 - Early exit on mismatch
 
 ## Applications
+
 - Recursive string validation
 - Palindrome checking in recursive algorithms
 
 ## Practice Problems
+
 1. Check palindrome for numbers using recursion
 2. Check palindrome for case-insensitive strings
 3. Check palindrome for linked lists (recursive)
 
 ## Key Takeaways
+
 - Recursive two-pointer approach is elegant and clear
 - Recursion stack grows with string length
 - Base cases are crucial for correctness

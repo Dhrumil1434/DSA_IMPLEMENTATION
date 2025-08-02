@@ -1,20 +1,25 @@
 # Problem 8: Reverse Array Using Recursion (Single Pointer)
 
 ## Problem Statement
+
 Reverse an array using recursion with a single pointer approach. This is an optimized version of the two-pointer approach that reduces the number of parameters and simplifies the logic.
 
 ## Example
+
 **Input:** arr[] = {5, 4, 3, 2, 1}  
 **Output:** arr[] = {1, 2, 3, 4, 5}
 
 ## Solution Approach
+
 This problem uses single-pointer recursion:
+
 - **Single Pointer**: Only track the current index (i)
 - **Mirror Index**: Calculate the corresponding index from the end
 - **Swap Strategy**: Swap current element with its mirror element
 - **Base Condition**: Stop when pointer reaches middle of array
 
 ## Code Implementation
+
 ```java
 class p8 {
     public static int[] reverse(int arr[], int i) {
@@ -22,18 +27,18 @@ class p8 {
         if (i >= arr.length / 2) {
             return arr;
         }
-        
+
         // Swap current element with its mirror element
         ArrayUtils.swap(arr, i, arr.length - 1 - i);
-        
+
         // Recursive call with incremented pointer
         return reverse(arr, i + 1);
     }
-    
+
     public static void main(String[] args) {
         int arr[] = {5, 4, 3, 2, 1};
         int ans[] = reverse(arr, 0);
-        
+
         for (int x : ans) {
             System.out.println(x);
         }
@@ -108,11 +113,11 @@ Final Result: [1, 2, 3, 4, 5]
 
 ## Call Stack Visualization
 
-| Call Stack Level | Function Call | i | Mirror Index | Array State | Action |
-|------------------|---------------|---|--------------|-------------|---------|
-| 1 | reverse(arr, 0) | 0 | 4 | [5,4,3,2,1] | Swap arr[0]↔arr[4] |
-| 2 | reverse(arr, 1) | 1 | 3 | [1,4,3,2,5] | Swap arr[1]↔arr[3] |
-| 3 | reverse(arr, 2) | 2 | 2 | [1,2,3,4,5] | Base case, return |
+| Call Stack Level | Function Call   | i   | Mirror Index | Array State | Action             |
+| ---------------- | --------------- | --- | ------------ | ----------- | ------------------ |
+| 1                | reverse(arr, 0) | 0   | 4            | [5,4,3,2,1] | Swap arr[0]↔arr[4] |
+| 2                | reverse(arr, 1) | 1   | 3            | [1,4,3,2,5] | Swap arr[1]↔arr[3] |
+| 3                | reverse(arr, 2) | 2   | 2            | [1,2,3,4,5] | Base case, return  |
 
 ## Array State Progression
 
@@ -135,16 +140,19 @@ Final:    [1, 2, 3, 4, 5]
 ## Key Concepts Explained
 
 ### 1. Single Pointer Optimization
+
 - **Advantage**: Reduces parameter count from 2 to 1
 - **Mirror Calculation**: `arr.length - 1 - i`
 - **Efficiency**: Same time complexity, cleaner code
 
 ### 2. Middle Point Logic
+
 - **Base Condition**: `if (i >= arr.length / 2)`
 - **Why `/2`**: Only need to process first half
 - **Handles Both**: Even and odd length arrays
 
 ### 3. Mirror Index Calculation
+
 - **Formula**: `arr.length - 1 - i`
 - **Purpose**: Find corresponding element from end
 - **Example**: For i=0, mirror=4; for i=1, mirror=3
@@ -152,10 +160,12 @@ Final:    [1, 2, 3, 4, 5]
 ## Time and Space Complexity
 
 ### Time Complexity: O(n/2) = O(n)
+
 - **Explanation**: Function is called n/2 times (for n elements)
 - **Analysis**: Each call performs constant time operations (swap, mirror calculation)
 
 ### Space Complexity: O(n/2) = O(n)
+
 - **Explanation**: Maximum depth of recursion stack = n/2
 - **Stack Frames**: Each recursive call creates a new stack frame
 - **Memory**: O(n) space used in call stack
@@ -175,17 +185,18 @@ Call Stack (Top to Bottom):
 
 ## Comparison: Single vs Two Pointer
 
-| Aspect | Single Pointer | Two Pointer |
-|--------|----------------|-------------|
-| **Parameters** | 1 (index) | 2 (start, end) |
-| **Base Condition** | `i >= n/2` | `i >= j` |
-| **Mirror Calculation** | `n-1-i` | Direct j parameter |
-| **Code Complexity** | Simpler | More explicit |
-| **Readability** | High | High |
+| Aspect                 | Single Pointer | Two Pointer        |
+| ---------------------- | -------------- | ------------------ |
+| **Parameters**         | 1 (index)      | 2 (start, end)     |
+| **Base Condition**     | `i >= n/2`     | `i >= j`           |
+| **Mirror Calculation** | `n-1-i`        | Direct j parameter |
+| **Code Complexity**    | Simpler        | More explicit      |
+| **Readability**        | High           | High               |
 
 ## Alternative Implementations
 
 ### Approach 1: Two Pointer (Previous Problem)
+
 ```java
 public static int[] reverse(int arr[], int i, int j) {
     if (i >= j) return arr;
@@ -195,6 +206,7 @@ public static int[] reverse(int arr[], int i, int j) {
 ```
 
 ### Approach 2: Iterative Single Pointer
+
 ```java
 public static void reverse(int arr[]) {
     for (int i = 0; i < arr.length / 2; i++) {
@@ -204,6 +216,7 @@ public static void reverse(int arr[]) {
 ```
 
 ### Approach 3: Using Collections
+
 ```java
 public static void reverse(Integer arr[]) {
     Collections.reverse(Arrays.asList(arr));
@@ -237,10 +250,10 @@ public static void reverse(Integer arr[]) {
 ```java
 public static int[] reverseWithStep(int arr[], int i, int step) {
     if (i >= arr.length / 2) return arr;
-    
+
     int mirrorIndex = arr.length - 1 - i;
     ArrayUtils.swap(arr, i, mirrorIndex);
-    
+
     return reverseWithStep(arr, i + step, step);
 }
 
@@ -253,4 +266,4 @@ public static int[] reverseWithStep(int arr[], int i, int step) {
 - **Mirror index calculation** is key to single pointer technique
 - **Middle point logic** handles both even and odd length arrays
 - **Same time complexity** as two-pointer approach
-- **Cleaner implementation** with fewer parameters 
+- **Cleaner implementation** with fewer parameters
