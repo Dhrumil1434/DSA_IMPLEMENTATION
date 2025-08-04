@@ -50,6 +50,7 @@ Welcome to **DSA Notes by Dmeel** - your comprehensive guide to mastering recurs
 | 11  | [Check if a given string is a palindrome using recursion with single pointer optimization](p11_palindrome_optimized.md)                                                     | ⭐⭐ Easy        | Single pointer recursion, mirror index calculation, optimization        |
 | 12  | [Calculate the Nth Fibonacci number using recursion with memoization](p12_fibonacci_memoization.md)                                                                         | ⭐⭐⭐ Medium    | Dynamic programming, memoization, overlapping subproblems               |
 | 13  | [Print all subsequences of a given string using choice-based recursion](p13_subsequence_notes.md)                                                                           | ⭐⭐⭐⭐ Hard    | Choice-based recursion, complete enumeration, binary decision tree      |
+| 14  | [Implement Merge Sort algorithm using divide-and-conquer recursion](p14_merge_sort.md)                                                                                    | ⭐⭐⭐ Medium   | Divide-and-conquer, stable sorting, O(n log n) complexity              |
 
 ---
 
