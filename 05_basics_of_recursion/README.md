@@ -19,7 +19,7 @@
 
 ## 🎯 Overview
 
-Welcome to **DSA Notes by Dmeel** - your comprehensive guide to mastering recursion fundamentals! This repository contains detailed notes, step-by-step solutions, and visual explanations for 13 essential recursion problems that form the foundation of algorithmic thinking.
+Welcome to **DSA Notes by Dmeel** - your comprehensive guide to mastering recursion fundamentals! This repository contains detailed notes, step-by-step solutions, and visual explanations for 15 essential recursion problems that form the foundation of algorithmic thinking.
 
 ### 🌟 What You'll Learn
 
@@ -50,7 +50,8 @@ Welcome to **DSA Notes by Dmeel** - your comprehensive guide to mastering recurs
 | 11  | [Check if a given string is a palindrome using recursion with single pointer optimization](p11_palindrome_optimized.md)                                                     | ⭐⭐ Easy        | Single pointer recursion, mirror index calculation, optimization        |
 | 12  | [Calculate the Nth Fibonacci number using recursion with memoization](p12_fibonacci_memoization.md)                                                                         | ⭐⭐⭐ Medium    | Dynamic programming, memoization, overlapping subproblems               |
 | 13  | [Print all subsequences of a given string using choice-based recursion](p13_subsequence_notes.md)                                                                           | ⭐⭐⭐⭐ Hard    | Choice-based recursion, complete enumeration, binary decision tree      |
-| 14  | [Implement Merge Sort algorithm using divide-and-conquer recursion](p14_merge_sort.md)                                                                                    | ⭐⭐⭐ Medium   | Divide-and-conquer, stable sorting, O(n log n) complexity              |
+| 14  | [Implement Merge Sort algorithm using divide-and-conquer recursion](p14_merge_sort.md)                                                                                      | ⭐⭐⭐ Medium    | Divide-and-conquer, stable sorting, O(n log n) complexity               |
+| 15  | [Implement Quick Sort algorithm using divide-and-conquer recursion](p15_quick_sort.md)                                                                                      | ⭐⭐⭐ Medium    | Divide-and-conquer, partition, in-place sorting, O(n log n) average     |
 
 ---
 
@@ -81,6 +82,8 @@ graph TD
     E --> E3[Problem 9-11: Palindrome]
 
     F --> F1[Problem 13: Subsequences]
+    F --> F2[Problem 14: Merge Sort]
+    F --> F3[Problem 15: Quick Sort]
 ```
 
 ### 🎯 **Learning Objectives by Level**
@@ -215,6 +218,7 @@ Copy this template and mark your progress:
 ### Level 5: Advanced Recursion
 
 - [ ] Problem 13: Print All Subsequences
+- [ ] Problem 14: Merge Sort Algorithm
 ```
 
 ### 📊 **Performance Metrics**
@@ -318,6 +322,6 @@ _"The only way to learn a new programming language is by writing programs in it.
 ---
 
 **Last Updated**: December 2024  
-**Version**: 1.0  
-**Total Problems**: 13  
+**Version**: 1.1  
+**Total Problems**: 14  
 **Completion Status**: ✅ Complete
