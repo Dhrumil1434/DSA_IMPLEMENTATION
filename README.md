@@ -25,6 +25,7 @@
 | # | Problem | Difficulty | Key Topics | Link |
 |---|---------|------------|------------|------|
 | 1 | Largest Element in Array | ⭐ Beginner | Linear scan, sorting vs optimal | [Markdown](STEP_3_ARRAY/EASY/p1_largest_element.md) |
+| 2 | Second Largest & Second Smallest | ⭐⭐ Easy | Distinctness, two-pass vs single-pass | [Markdown](STEP_3_ARRAY/EASY/p2_second_largest_smallest.md) |
 
 ---
 
@@ -34,9 +35,11 @@ From repo root:
 ```bash
 # Compile
 javac STEP_3_ARRAY\EASY\p1.java
+javac STEP_3_ARRAY\EASY\p2.java
 
 # Run using fully qualified class name (matches the package declaration)
 java STEP_3_ARRAY.EASY.p1
+java STEP_3_ARRAY.EASY.p2
 ```
 
 ---
