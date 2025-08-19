@@ -26,6 +26,7 @@
 |---|---------|------------|------------|------|
 | 1 | Largest Element in Array | ⭐ Beginner | Linear scan, sorting vs optimal | [Markdown](STEP_3_ARRAY/EASY/p1_largest_element.md) |
 | 2 | Second Largest & Second Smallest | ⭐⭐ Easy | Distinctness, two-pass vs single-pass | [Markdown](STEP_3_ARRAY/EASY/p2_second_largest_smallest.md) |
+| 3 | Check if Array is Sorted | ⭐ Beginner | Inversions, strict vs non-decreasing | [Markdown](STEP_3_ARRAY/EASY/p3_check_sorted.md) |
 
 ---
 
@@ -36,10 +37,12 @@ From repo root:
 # Compile
 javac STEP_3_ARRAY\EASY\p1.java
 javac STEP_3_ARRAY\EASY\p2.java
+javac STEP_3_ARRAY\EASY\p3.java
 
 # Run using fully qualified class name (matches the package declaration)
 java STEP_3_ARRAY.EASY.p1
 java STEP_3_ARRAY.EASY.p2
+java STEP_3_ARRAY.EASY.p3
 ```
 
 ---
