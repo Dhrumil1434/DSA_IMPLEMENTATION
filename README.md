@@ -30,6 +30,7 @@
 | 4 | Remove Duplicates / Count Unique | ⭐⭐ Easy | HashSet vs two-pointer, in-place dedup | [Markdown](STEP_3_ARRAY/EASY/p4_remove_duplicates.md) |
 | 5 | Rotate Array Left by One | ⭐ Beginner | In-place rotation, reversal technique | [Markdown](STEP_3_ARRAY/EASY/p5_rotate_left_by_one.md) |
 | 6 | Rotate Array by K Places | ⭐⭐ Easy | Modular arithmetic, temp arrays, execution tables | [Markdown](STEP_3_ARRAY/EASY/p6_rotate_by_k_places.md) |
+| 7 | Move Zeros to End | ⭐⭐ Easy | Two-pointer technique, order preservation | [Markdown](STEP_3_ARRAY/EASY/p7_move_zeros_to_end.md) |
 
 ---
 
@@ -44,6 +45,7 @@ javac STEP_3_ARRAY\EASY\p3.java
 javac STEP_3_ARRAY\EASY\p4.java
 javac STEP_3_ARRAY\EASY\p5.java
 javac STEP_3_ARRAY\EASY\p6.java
+javac STEP_3_ARRAY\EASY\p7.java
 
 # Run using fully qualified class name (matches the package declaration)
 java STEP_3_ARRAY.EASY.p1
@@ -52,6 +54,7 @@ java STEP_3_ARRAY.EASY.p3
 java STEP_3_ARRAY.EASY.p4
 java STEP_3_ARRAY.EASY.p5
 java STEP_3_ARRAY.EASY.p6
+java STEP_3_ARRAY.EASY.p7
 ```
 
 ---
