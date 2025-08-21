@@ -6,4 +6,12 @@ public class ArrayUtils {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+    // reverse array from given start to end index
+    public static void reverse(int arr[], int start, int end) {
+        while (start < end) {
+            swap(arr, start, end);
+            start++;
+            end--;
+        }
+    }
 }
