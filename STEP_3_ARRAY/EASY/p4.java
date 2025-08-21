@@ -1,6 +1,5 @@
 package STEP_3_ARRAY.EASY;
 
-import java.util.Arrays;
 // this is the brute force solution for the counting the duplicate element in the array
 // we can think like first we can take the hashset and add the element in the hashset
 // then we can iterate the hashset and add the element in the array
