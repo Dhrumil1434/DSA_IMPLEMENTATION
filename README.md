@@ -31,6 +31,7 @@
 | 5 | Rotate Array Left by One | ⭐ Beginner | In-place rotation, reversal technique | [Markdown](STEP_3_ARRAY/EASY/p5_rotate_left_by_one.md) |
 | 6 | Rotate Array by K Places | ⭐⭐ Easy | Modular arithmetic, temp arrays, execution tables | [Markdown](STEP_3_ARRAY/EASY/p6_rotate_by_k_places.md) |
 | 7 | Move Zeros to End | ⭐⭐ Easy | Two-pointer technique, order preservation | [Markdown](STEP_3_ARRAY/EASY/p7_move_zeros_to_end.md) |
+| 8 | Linear Search | ⭐ Beginner | Sequential scanning, early termination, edge cases | [Markdown](STEP_3_ARRAY/EASY/p8_linear_search.md) |
 
 ---
 
@@ -46,6 +47,7 @@ javac STEP_3_ARRAY\EASY\p4.java
 javac STEP_3_ARRAY\EASY\p5.java
 javac STEP_3_ARRAY\EASY\p6.java
 javac STEP_3_ARRAY\EASY\p7.java
+javac STEP_3_ARRAY\EASY\p8.java
 
 # Run using fully qualified class name (matches the package declaration)
 java STEP_3_ARRAY.EASY.p1
@@ -55,6 +57,7 @@ java STEP_3_ARRAY.EASY.p4
 java STEP_3_ARRAY.EASY.p5
 java STEP_3_ARRAY.EASY.p6
 java STEP_3_ARRAY.EASY.p7
+java STEP_3_ARRAY.EASY.p8
 ```
 
 ---
