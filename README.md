@@ -33,6 +33,7 @@
 | 7 | Move Zeros to End | ⭐⭐ Easy | Two-pointer technique, order preservation | [Markdown](STEP_3_ARRAY/EASY/p7_move_zeros_to_end.md) |
 | 8 | Linear Search | ⭐ Beginner | Sequential scanning, early termination, edge cases | [Markdown](STEP_3_ARRAY/EASY/p8_linear_search.md) |
 | 9 | Union of Two Sorted Arrays | ⭐⭐ Easy | Merge-like two pointers, duplicate guard | [Markdown](STEP_3_ARRAY/EASY/p9_union_of_two_sorted_arrays.md) |
+| 10 | Intersection of Two Sorted Arrays | ⭐⭐ Easy | Two pointers, multiset intersection | [Markdown](STEP_3_ARRAY/EASY/p10_intersection_of_two_sorted_arrays.md) |
 
 ---
 
