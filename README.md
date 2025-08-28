@@ -42,7 +42,7 @@
 ## 🛠️ Run Guide (Java)
 From repo root:
 
-```bash
+   ```bash
 # Compile
 javac STEP_3_ARRAY\EASY\p1.java
 javac STEP_3_ARRAY\EASY\p2.java

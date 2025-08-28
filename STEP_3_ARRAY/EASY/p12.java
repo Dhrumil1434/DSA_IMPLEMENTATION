@@ -9,8 +9,10 @@ public class p12 {
             if (arr[i] == 0) {
                 count = 0;
             }
-            count=count+1;
-            max_count = Math.max(max_count, count);
+            else {
+                count = count + 1;
+                max_count = Math.max(max_count, count);
+            }
         }
         return max_count;
     }
