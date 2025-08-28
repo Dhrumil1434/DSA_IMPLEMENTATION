@@ -35,6 +35,7 @@
 | 9 | Union of Two Sorted Arrays | ⭐⭐ Easy | Merge-like two pointers, duplicate guard | [Markdown](STEP_3_ARRAY/EASY/p9_union_of_two_sorted_arrays.md) |
 | 10 | Intersection of Two Sorted Arrays | ⭐⭐ Easy | Two pointers, multiset intersection | [Markdown](STEP_3_ARRAY/EASY/p10_intersection_of_two_sorted_arrays.md) |
 | 11 | Find Missing Number (1..N) | ⭐⭐ Easy | Counting array, Gauss sum, XOR | [Markdown](STEP_3_ARRAY/EASY/p11_find_missing_number.md) |
+| 12 | Max Consecutive Ones | ⭐ Beginner | Sliding count, streak reset on zeros | [Markdown](STEP_3_ARRAY/EASY/p12_max_consecutive_ones.md) |
 
 ---
 
