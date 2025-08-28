@@ -1,0 +1,25 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "[!S]*/**": true,
+    "S[!T]*/**": true,
+    "ST[!E]*/**": true,
+    "STE[!P]*/**": true,
+    "STEP[!_]*/**": true,
+    "STEP_[!3]*/**": true,
+    "STEP_3[!_]*/**": true,
+    "STEP_3_[!A]*/**": true,
+    "STEP_3_A[!R]*/**": true,
+    "STEP_3_AR[!R]*/**": true,
+    "STEP_3_ARR[!A]*/**": true,
+    "STEP_3_ARRA[!Y]*/**": true,
+    "STEP_3_ARRAY/[!E]*/**": true,
+    "STEP_3_ARRAY/E[!A]*/**": true,
+    "STEP_3_ARRAY/EA[!S]*/**": true,
+    "STEP_3_ARRAY/EAS[!Y]*/**": true
+  }
+}
